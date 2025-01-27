@@ -8,10 +8,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {CurrencyPipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, MatSlideToggleModule, MatExpansionModule, MatDividerModule, MatCardModule, MatGridListModule, MatIconModule, MatButtonModule],
+  imports: [RouterModule, MatSlideToggleModule, MatExpansionModule, MatDividerModule, MatCardModule, MatGridListModule, MatIconModule, MatButtonModule, CurrencyPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <main>
@@ -60,11 +61,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
           <mat-card-actions>
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
+            <button mat-fab extended>
+                      <mat-icon>favorite</mat-icon>
+                      Basic
+                    </button>
           </mat-card-actions>
         </mat-card-footer>
       </mat-card>
       <mat-divider></mat-divider>
-
       <mat-grid-list cols="3" rowHeight="2:2">
         <mat-grid-tile>
           <mat-card appearance="outlined" class="mt-4">
@@ -84,11 +88,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
         </mat-grid-tile>
         <mat-grid-tile colspan="2">
           <mat-grid-tile-header> Numeros </mat-grid-tile-header> 
-          <p>1</p>
+          <p class="text-xl m-5">1</p>
           <p>2</p>
           <p>3</p>
           <p>4</p>
-          <mat-grid-tile-footer>
+          <mat-grid-tile-footer class="!py-9">
             <section>
               <div class="example-label">Extended Fab</div>
               <div class="example-button-row">
@@ -119,6 +123,22 @@ import {MatGridListModule} from '@angular/material/grid-list';
         <mat-grid-tile>3</mat-grid-tile>
         <mat-grid-tile>4</mat-grid-tile>
       </mat-grid-list>
+      
+      <mat-divider></mat-divider>
+      
+      <section class="listing">
+        <img
+        class="listing-photo"
+        src="./assets/prueba 1.jpg"
+        alt="Exterior photo of name"
+        crossorigin
+      />
+      <h2 class="listing-heading">Press on</h2>
+      <p class="listing-location">Precio: {{ 80000 | currency : 'USD': 'symbol': '1.0-0'}}</p>
+      <button mat-fab aria-label="Example icon button with a delete icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </section>
 
     </main>
   `,
