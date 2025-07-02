@@ -25,7 +25,7 @@ import {CurrencyPipe} from '@angular/common';
         <router-outlet></router-outlet>
       </section>
       <mat-divider></mat-divider>
-      <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+      <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
       <mat-divider></mat-divider>
       <mat-accordion>
         <mat-expansion-panel hideToggle>
