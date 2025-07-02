@@ -129,7 +129,7 @@ import {CurrencyPipe} from '@angular/common';
       <section class="listing">
         <img
         class="listing-photo"
-        src="./assets/prueba 1.jpg"
+        src="./assets/descarga.jpg"
         alt="Exterior photo of name"
         crossorigin
       />
