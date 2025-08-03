@@ -1,25 +1,29 @@
 :host {
-    --content-padding: 10px;
-  }
-  header {
-    display: block;
-    height: 60px;
-    padding: var(--content-padding);
-    box-shadow: 0px 5px 25px var(--shadow-color);
-  }
-  .content {
-    padding: var(--content-padding);
-  }
-  
-  mat-grid-tile {
-    background: lightblue;
-  }
+  --content-padding: 10px;
+}
+header {
+  display: block;
+  height: 60px;
+  padding: var(--content-padding);
+  box-shadow: 0px 5px 25px var(--shadow-color);
+}
+.content {
+  padding: var(--content-padding);
+}
 
-  section {
-    display: table;
-  }
+mat-grid-tile {
+  background: lightblue;
+}
+
+section {
+  display: table;
+}
+
+main {
+  height: 100%;
+}
   
-  .example-label {
+  /* .example-label {
     display: table-cell;
     font-size: 14px;
     margin-left: 8px;
@@ -82,3 +86,49 @@
     margin-left: 5px;
   }
   
+
+  .example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .example-sidenav {
+    padding: 20px;
+  }
+
+
+
+  .example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+} */
+
+/*
+ * This padding sets alignment of the nested nodes.
+ */
+/* .example-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
+} */
+
+/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */
+/* .example-tree div[role=group] > .mat-nested-tree-node {
+  padding-left: 40px;
+} */
